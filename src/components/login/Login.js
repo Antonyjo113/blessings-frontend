@@ -50,8 +50,8 @@ const Login = (props) => {
         //     navigate(`/kra/edit`, { state: { isEdit: true } });
         // })
     }
- 
 
+    // RETURN COMPONENT
     return (
         <div className='login-form'>
 
