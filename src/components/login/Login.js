@@ -1,16 +1,3 @@
-// import React from 'react';
-
-// const MyComponent = () => {
-//     return (
-//         <div>
-        
-//         </div>
-//     );
-// };
-
-// export default MyComponent;
-
-
 // REACT IMPORTS
 import React, { useEffect, useState, useRef } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
@@ -24,25 +11,41 @@ import TextboxElement from '../../uiComponents/InputTextElement';
 import ButtonElement from '../../uiComponents/ButtonElement';
 import LoginService from '../../services/login/LoginService';
 
-
-
+// REACT COMPONENT
 const Login = (props) => {
 
     // HOOKS
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
 
-    //  FUNCTIONS
+    // REACT INITIATIONS
+    let navigate = useNavigate();
+
+    // FUNCTIONS
     const onClickLogin = () => {
 
         let loginData = {
             'username': username,
             'password': password
         }
+        console.log('LOGIN CREDENTIALS: ', loginData);
 
-		LoginService.userLogin(loginData).then(data => {
-            console.log('data', data);
-        })
+        if(username != undefined && username != '' && password != undefined && password != ''){
+
+            if(username === 'admin' && password == 'admin'){
+                sessionStorage.setItem('authentication', 'blessings');
+                setTimeout(() => {
+                    navigate('/dashboard');
+                }, 2000);
+            }
+            else {
+                console.log('Authentication Failed ...!');
+            }
+        }
+        // ==========  API SERVICES ==========
+		// LoginService.userLogin(loginData).then(data => {
+        //     console.log('data', data);
+        // })
 
         // PerformanceService.getForm(id).then(data => {
         //     setLoading(false);
@@ -72,10 +75,7 @@ const Login = (props) => {
                         onClickButton={() => onClickLogin()}
                     />
                 </div>
-
         </div>
-
     );
-
 }
 export default Login;
