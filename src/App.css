@@ -1,3 +1,108 @@
+
+
+.App {
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+
+
+/* ========== COLORS & FONTSIZES ========== */
+.tx-blue {
+  color: blue;
+}
+
+.tx-lighblue {
+  color: lightblue;
+}
+
+.tx-yellow {
+  color: yellow;
+}
+
+.tx-lightyellow {
+  color: lightyellow;
+}
+
+.tx-black{
+  color: black;
+}
+
+.tx-lightblack{
+  color: rgb(47, 46, 46);
+}
+
+.tx-white{
+  color: #FFFFFF;
+}
+
+.tx-lightwhite{
+  color: rgb(211, 208, 208);
+}
+
+.bg-blue {
+  background-color: blue;
+}
+
+.bg-lighblue {
+  background-color: lightblue;
+}
+
+.bg-yellow {
+  background-color: yellow;
+}
+
+.bg-lightyellow {
+  background-color: lightyellow;
+}
+
+.bg-black{
+  background-color: black;
+}
+
+.bg-lightblack{
+  background-color: rgb(47, 46, 46);
+}
+
+.bg-white{
+  background-color: #FFFFFF;
+}
+
+.bg-lightwhite{
+  background-color: rgb(211, 208, 208);
+}
+
+.fz-ten{
+  font-size: 10px;
+}
+
+.fz-twelve{
+  font-size: 12px;
+}
+
+.fz-fourteen{
+  font-size: 14px;
+}
+
+.fw-light{
+  font-weight: 300;
+}
+
+.fw-normal{
+  font-weight: 500;
+}
+
+.fw-semibold{
+  font-weight: 700;
+}
+
+.fw-bold{
+  font-weight: 900;
+}
+
+.m-zero{
+  margin: 0;
+}
+
 /* ========== LOGIN DESIGN ========== */
 .layout-wrapper{
   background-color: black;
@@ -29,8 +134,6 @@
   left: 0;
 }
 
-
-
 .close-sidebar-icon {
   display: none;
 }
@@ -60,8 +163,65 @@
   }
 }
 
+.login{
+  background-color: rgb(232, 241, 250);
+  height: 100vh;
+}
+.login-wrapper{
+  display: flex;
+}
 
+.logo-section{
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.login-section{
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.login-box{
+  padding: 20px;
+  text-align: center;
+}
+
+.logo{
+  height: 150px;
+  width: 150px;
+}
+
+.logo-box{
+  padding: 20px;
+  text-align: center;
+}
+
+.logo-title{
+  font-size: 70px;
+}
+
+.input-text{
+  padding: 5px;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.login-button{
+  padding: 5px 30px;
+  margin: 5px 0;
+  border: 0.1px solid rgb(108, 107, 107);
+  border-radius: 10px;
+}
+
+.login-title{
+  font-size: 30px;
+  margin: 15px 0;
+}
 
 /* ========== DASHBOARD DESIGN ========== */

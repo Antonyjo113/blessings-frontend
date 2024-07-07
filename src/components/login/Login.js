@@ -10,6 +10,7 @@ import { Button } from 'primereact/button';
 import TextboxElement from '../../uiComponents/InputTextElement';
 import ButtonElement from '../../uiComponents/ButtonElement';
 import LoginService from '../../services/login/LoginService';
+import logoimage from '../../assets/images/logo.png';
 
 // REACT COMPONENT
 const Login = (props) => {
@@ -56,25 +57,33 @@ const Login = (props) => {
 
     // RETURN COMPONENT
     return (
-        <div className='login-form'>
-
-                <div className='input-box'>
-                    <TextboxElement id='username' placeholder="Username" className='username input-text' value={username}  onChangeText={(e) => setUsername(e.target.value)} />
+        <div className='login'>
+            <div className='login-wrapper'>
+                <div className='logo-section'>
+                    <div className='logo-box'>
+                        <img src={logoimage} className='logo' alt='Blessings Logo' />
+                        <h1 className='logo-title tx-white m-zero'>Blessings</h1>
+                    </div>
                 </div>
-
-                <div className='input-box'>
-                    <TextboxElement id="password" placeholder="Password" className='password input-text' value={password}  onChangeText={(e) => setPassword(e.target.value)} />
+                <div className='login-section'>
+                    <div className='login-box'>
+                        <h1 className='login-title tx-white m-zero'>LOGIN</h1>
+                        <div className='input-box'>
+                            <TextboxElement id='username' placeholder="Username" className='username input-text' value={username}  onChangeText={(e) => setUsername(e.target.value)} />
+                        </div>
+                        <div className='input-box'>
+                            <TextboxElement id="password" placeholder="Password" className='password input-text' value={password}  onChangeText={(e) => setPassword(e.target.value)} />
+                        </div>
+                        <div className='input-box'>
+                            <ButtonElement
+                                label="LOGIN"
+                                className="login-button tx-white bg-yellow fw-semibold"
+                                onClickButton={() => onClickLogin()}
+                            />
+                        </div>
+                    </div>
                 </div>
-                <div className='input-box'>
-                    {/* <Button icon='pi pi-arrow-right' iconPos="right"  type='button' className="p-mt-2 signin-button-o365 signin-button" /> */}
-                    <ButtonElement
-                        label="LOGIN"
-                        icon="pi pi-plus"
-                        iconPos="left"
-                        className="addRoles-button"
-                        onClickButton={() => onClickLogin()}
-                    />
-                </div>
+            </div>
         </div>
     );
 }
