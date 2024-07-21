@@ -43,7 +43,7 @@ const PieChart = ({ data }) => {
                 bodyFont: {
                     size: 12 
                 }
-            } 
+            }
         }
     };
 
