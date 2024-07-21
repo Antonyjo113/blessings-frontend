@@ -1,6 +1,7 @@
 // React Router
 import { React, useState, useEffect, useRef, createContext } from 'react';
 import { Route, Routes, useNavigate } from "react-router-dom";
+import 'react-big-calendar/lib/css/react-big-calendar.css';
 
 // Import CSS files
 import './App.css';
@@ -14,6 +15,7 @@ import Layout from './components/layout/Layout';
 export const UserContext = createContext();
 
 function App() {
+  
 
   const [createPageTitle, setCreatePageTitle] = useState({
     setPageTitle: false,

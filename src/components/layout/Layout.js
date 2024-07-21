@@ -70,13 +70,16 @@ const Layout = () => {
             </div>
 
             <div className='main-wrapper'>
-                <Header
-                    // onSelectHambuger = {hamburgerClick}
-                    menuLabel = {menuLabel}
-                    menuTitle = {menuTitle}
-                />
-                <div className='main-content'>
-                    <Outlet></Outlet>
+                <div className='main-wrapper-content'>
+
+                    <Header
+                        // onSelectHambuger = {hamburgerClick}
+                        menuLabel = {menuLabel}
+                        menuTitle = {menuTitle}
+                    />
+                    <div className='main-content'>
+                        <Outlet></Outlet>
+                    </div>
                 </div>
             </div>
         </div>

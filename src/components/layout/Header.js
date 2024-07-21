@@ -14,8 +14,9 @@ const Header = ({ menuLabel, menuTitle }) => {
     return (
         <div className='header'>
             <div className="title">
-                <h1>{menuLabel} Blessings {menuTitle}</h1>
+                <h2 className='m-zero tx-blue'>{menuTitle} </h2>
             </div>
+            <div className='header-line'></div>
             <div className="card">
                 <BreadCrumb model={items} />
             </div>
