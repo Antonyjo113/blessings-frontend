@@ -58,7 +58,7 @@ const BookingList = (props) => {
             end: 'check',
         }
         return (
-           <span onclick={() => actionTemplateValue(data)} className='icon'>
+           <span onClick={() => actionTemplateValue(data)} className='icon'>
                 <i class="bi bi-pencil"></i> 
            </span>
         )
@@ -70,7 +70,7 @@ const BookingList = (props) => {
         {field: 'endDate', header:'End Date'},
         {field: 'customerDetails', header:'Customer Details'},
         {field: 'status', header:'Status'},
-        {field: 'action', header:'Action', body: actionTemplate, style:{textAlign:'center'}}
+        {field: 'action', header:'Action', body: actionTemplate, style:{textAlign:'center', cursor:'pointer'}}
     ]
 
     const makeBookingData = [
@@ -112,7 +112,7 @@ const BookingList = (props) => {
         {field: 'availableInfo', header:'Available Info'},
         {field: 'roomFeatures', header:'Room Features'},
         {field: 'serviceInformation', header:'Service Information'},
-        {field: 'action', header:'Action', body: actionTemplate, style:{textAlign:'center'}}
+        {field: 'action', header:'Action', body: actionTemplate, style:{textAlign:'center', cursor:'pointer'}}
     ]
 
     const onClickMakeBooking = () => {
@@ -182,7 +182,7 @@ const BookingList = (props) => {
                         columns={makeBookingColumns}   
                     />
             </div>
-            <div className='tx-center'>
+            <div className='button-box tx-center'>
                 <ButtonElement
                     label="Make Booking"   
                     className="button-one tx-white bg-yellow fw-semibold"

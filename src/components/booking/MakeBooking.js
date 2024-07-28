@@ -44,7 +44,7 @@ const MakeBooking = (props) => {
     ];
 
     const actionTemplateValue = (data) => {
-        console.log('data');
+        navigate('/create-booking');
     }
 
     const actionTemplate = (rowData) => {
@@ -53,7 +53,7 @@ const MakeBooking = (props) => {
             end: 'check',
         }
         return (
-           <span onclick={() => actionTemplateValue(data)} className='icon'>
+           <span onClick={() => actionTemplateValue(data)} className='icon'>
                 <i class="bi bi-pencil"></i> 
            </span>
         )
@@ -65,7 +65,7 @@ const MakeBooking = (props) => {
         {field: 'availableInfo', header:'Available Info'},
         {field: 'roomFeatures', header:'Room Features'},
         {field: 'serviceInformation', header:'Service Information'},
-        {field: 'action', header:'Action', body: actionTemplate, style:{textAlign:'center'}}
+        {field: 'action', header:'Action', body: actionTemplate, style:{textAlign:'center', cursor:'pointer'}}
     ]
 
     const onClickMakeBooking = () => {
