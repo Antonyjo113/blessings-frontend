@@ -1,11 +1,15 @@
 // REACT IMPORTS
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef, useCallback } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { Calendar, momentLocalizer } from 'react-big-calendar';
 import moment from 'moment';
 
+
+  
 // REACT COMPONENT
 const Booking = (props) => {
+
+    let navigate = useNavigate();
 
     const localizer = momentLocalizer(moment)
 
@@ -21,29 +25,37 @@ const Booking = (props) => {
     
     const events = [
         {
-            title: 'Event 1',
+            title: '12',
             start: now,
             end: oneHourLater,
         },
         {
-            title: 'Event 2',
+            title: '13',
             start: tomorrow,
             end: oneHourAfterTomorrow,
         }
     ];
+
+    const handleSelectEvent = useCallback(event => {
+        // alert(event.title);
+        navigate('/booking-list')
+    }, []);
     
 
     // RETURN COMPONENT
     return (
-        <div>
-            <h1> Booking Page </h1>
+        <div className='main-content-wrapper'>
             <div className='spacing'>
-            <div className='spacing'>
+            <div className='calendar-box' style={{ height: '100vh' }}>   
                     <Calendar
                         localizer={localizer}
                         events={events}
                         startAccessor="start"
                         endAccessor="end"
+                        defaultView="month"
+                        views={['month', 'week', 'agenda']}
+                        style={{ height: 600 }}
+                        onSelectEvent={handleSelectEvent}
                     />
                 </div>
 

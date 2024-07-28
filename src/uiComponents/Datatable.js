@@ -10,7 +10,7 @@ const Datatable = (props) => {
     const { columns, headerGroup, value, subheader } = props;
 
     const dynamicColumns = columns.map((col) => (
-        <Column key={col.field} field={col.field} header={col.header} sortable={col.sortable} style={col.style} />
+        <Column key={col.field} field={col.field} header={col.header} body={col.body} sortable={col.sortable} style={col.style} />
     ));
 
     const headerGroupReturn = ( subheader? (
@@ -30,7 +30,7 @@ const Datatable = (props) => {
 
     return (
         <div>
-            {value && (
+            { value && (
                 <DataTable value={value} headerColumnGroup={headerGroupReturn} scrollable={true}>
                     {dynamicColumns}
                 </DataTable>

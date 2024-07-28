@@ -24,6 +24,14 @@ const Sidebar = ({ onMenuSelect }) => {
             command: (event) => {
                 onMenuItemClick(event)
             }
+        },
+        {
+            label: 'Make Booking',
+            title: 'makeBooking',
+            menuTitle: 'Make Booking',
+            command: (event) => {
+                onMenuItemClick(event)
+            }
         }
     ]
 

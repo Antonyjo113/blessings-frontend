@@ -22,9 +22,22 @@ const Layout = () => {
         if(location.pathname === '/dashboard'){
             setMenuLabel('Dashboard');
             setMenuTitle('Dashboard');
-        } else if (location.pathname === '/booking'){
+        } 
+        else if (location.pathname === '/booking'){
             setMenuLabel('Booking');
             setMenuTitle('Booking');
+        } 
+        else if (location.pathname === '/booking-list'){
+            setMenuLabel('Booking List');
+            setMenuTitle('Booking List');
+        }
+        else if (location.pathname === '/make-booking'){
+            setMenuLabel('Make Booking');
+            setMenuTitle('Make Booking');
+        }
+        else if (location.pathname === '/create-booking'){
+            setMenuLabel('Create Booking');
+            setMenuTitle('Create Booking');
         }
 
     }, [location.pathname])
@@ -45,8 +58,12 @@ const Layout = () => {
 
         if(title === 'dashboard'){
             navigate('/dashboard');
-        } else if (title === 'booking'){
+        } 
+        else if (title === 'booking'){
             navigate('/booking')
+        } 
+        else if (title === 'makeBooking'){
+            navigate('/make-booking')
         }
     }
 

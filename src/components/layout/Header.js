@@ -17,7 +17,7 @@ const Header = ({ menuLabel, menuTitle }) => {
                 <h2 className='m-zero tx-blue'>{menuTitle} </h2>
             </div>
             <div className='header-line'></div>
-            <div className="card">
+            <div className="">
                 <BreadCrumb model={items} />
             </div>
         </div>

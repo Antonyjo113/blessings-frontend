@@ -2,6 +2,8 @@
 import { React, useState, useEffect, useRef, createContext } from 'react';
 import { Route, Routes, useNavigate } from "react-router-dom";
 import 'react-big-calendar/lib/css/react-big-calendar.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Import CSS files
 import './App.css';
@@ -11,6 +13,10 @@ import Login from "./components/login/Login";
 import Dashboard from "./components/dashboard/Dashboard";
 import Booking from './components/booking/Booking';
 import Layout from './components/layout/Layout';
+import BookingList from './components/booking/BookingList';
+import MakeBooking from './components/booking/MakeBooking';
+import CreateBooking from './components/booking/CreateBooking';
+
 
 export const UserContext = createContext();
 
@@ -60,8 +66,11 @@ function App() {
                 </UserContext.Provider>
               }
             >
-              <Route path="/booking" element={<Booking />} />
               <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/booking" element={<Booking />} />
+              <Route path="/booking-list" element={<BookingList />} />
+              <Route path="/make-booking" element={<MakeBooking />} />
+              <Route path="/create-booking" element={<CreateBooking />} />
             </Route>
           </Routes>
         }
@@ -70,45 +79,3 @@ function App() {
 }
 
 export default App;
-
-
-// import logo from "./logo.svg";
-// import "./App.scss";
-
-// // React Router
-// import { Route, Routes, useNavigate } from "react-router-dom";
-
-
-
-// // Import files
-// import Login from "./components/login/Login";
-// import Home from "./components/home/Home";
-
-
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <Routes>
-//         <Route path="/" element={<Login />} />
-//         <Route path="/home" element={<Home />} />
-//       </Routes>
-//       {/* <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header> */}
-//     </div>
-//   );
-// }
-
-// export default App;

@@ -13,7 +13,6 @@ import LoginService from '../../services/login/LoginService';
 import logoimage from '../../assets/images/logo.png';
 import logoimage1 from '../../assets/images/image.png';
 
-
 // REACT COMPONENT
 const Login = (props) => {
 
@@ -80,7 +79,7 @@ const Login = (props) => {
                         <div className='login-input-box'>
                             <TextboxElement id="password" type='password' placeholder="Password" className='password input-text' value={password}  onChangeText={(e) => setPassword(e.target.value)} />
                         </div>
-                        <div className='login-button-box tx-center'>
+                        <div className='login-button-one tx-center'>
                             <ButtonElement
                                 label="LOGIN"   
                                 className="login-button tx-white bg-yellow fw-semibold"

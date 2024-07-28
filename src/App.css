@@ -42,7 +42,7 @@
 }
 
 .bg-blue {
-  background-color: blue;
+  background-color: #144083;
 }
 
 .bg-lighblue {
@@ -159,6 +159,10 @@ justify-content: center;
 
 .height-300{
   height: 300px !important;
+}
+
+.box-shadow{
+  box-shadow: 0 0 2px 1px #dadbdb !important;
 }
 
 /* ========== LOGIN DESIGN ========== */
@@ -279,7 +283,6 @@ justify-content: center;
 }
 .login-button:active {
   border: 1px solid #FFFFFF !important;
-
 }
 
 .login-title{
@@ -299,7 +302,7 @@ justify-content: center;
 }
 
 .siderbar-logo{
-  width: 30px;
+  width: 55px;
   height: 30px;
   padding-left: 23px;
 }
@@ -336,6 +339,7 @@ justify-content: center;
   color: #FFFFFF;
   text-shadow: 0.3px 0.3px #FFFFFF;
   padding: 2px 5px ;
+  text-decoration: none !important; 
 }
 
 .p-panelmenu{
@@ -436,10 +440,12 @@ justify-content: center;
 
 .p-datatable-table > .p-datatable-tbody > tr > td:nth-child(1) {
   border-left: 0.5px solid rgb(211, 210, 210) !important;  
+  border-bottom: 0.5px solid rgb(211, 210, 210) !important;  
 }
 
 .p-datatable-table > .p-datatable-tbody > tr > td:nth-child(n+1):nth-child(-n+10) {
   border-right: 0.5px solid rgb(211, 210, 210) !important;  
+  border-bottom: 0.5px solid rgb(211, 210, 210) !important;  
 }
 
 
@@ -455,11 +461,90 @@ justify-content: center;
   margin: 10px 0;
 }
 
-.main-content-wrapper{
-  width: 100% !important; 
-}
-
 .pie-chart{
   width: 300px !important;
   height: 300px !important;
 }
+.p-breadcrumb-list{
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.p-breadcrumb-list > li > a{
+  text-decoration: none !important;
+}
+
+.row {
+  margin: 0 !important;
+}
+.row>* {
+  padding: 0 !important;
+}
+
+.button-one{
+  border: none !important;
+  box-shadow: 0 0 2px 1px #dadbdb !important;
+  padding: 5px 20px !important;
+  outline: none !important;
+}
+.button-one:active{
+  box-shadow: 0 0 4px 3px #dadbdb !important;
+}
+
+/* ======== TABS ================ */
+
+.p-tabview{
+  padding: 20px !important;
+  box-shadow: 0 0 2px 1px #dadbdb !important;
+}
+
+.p-tabview-nav-container > div > ul {
+  display: flex !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style-type: none !important; 
+}
+
+.p-tabview-nav-container > div > ul > li {
+  padding: 5px 10px !important;
+}
+
+.p-tabview-nav-container > div > ul > li > a{
+  color: #144083 !important;
+  text-decoration: none !important;
+}
+
+
+.p-tabview-nav-container > div > ul > .p-tabview-selected.p-highlight {
+  color: #144083 !important; 
+  border-bottom: 3px solid #144083 !important;
+}
+
+
+.input-box-flex{
+  display: flex;
+  flex-direction: column;
+}
+
+.input-box-flex > label{
+  color: #144083 !important;
+  margin: 5px 0 !important;
+  font-size: 12px;
+}
+
+.input-box-flex > input {
+  padding: 0 !important;
+  margin: 0 !important;
+  padding: 3px !important;
+  font-size: 14px !important;
+  border: none !important;
+  outline: none !important;
+  width: 250px !important;
+  height: 33px !important;
+  box-shadow: 0 0 2px 1px #dadbdb !important;
+}
+
+.input-box-flex > input:hover {
+  box-shadow: 0 0 5px 1px #dadbdb !important;
+}
+
