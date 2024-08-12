@@ -61,7 +61,7 @@ const Sidebar = ({ onMenuSelect }) => {
                     <PanelMenu model={items} style={{ width: '20rem' }} />
                 </div>
                 <div className='logout content-center'>
-                    <p className='tx-blue' onClick={logout}>Logout</p>
+                    <i class="bi bi-box-arrow-right tx-blue" onClick={logout}></i>
                 </div>
             </div>
         </div>

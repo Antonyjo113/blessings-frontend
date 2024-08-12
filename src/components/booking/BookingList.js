@@ -185,7 +185,7 @@ const BookingList = (props) => {
             <div className='button-box tx-center'>
                 <ButtonElement
                     label="Make Booking"   
-                    className="button-one tx-white bg-yellow fw-semibold"
+                    className="button-one tx-black bg-yellow fw-semibold"
                     onClickButton={() => onClickMakeBooking()}
                 />
             </div>

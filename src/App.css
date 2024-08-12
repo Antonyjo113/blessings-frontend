@@ -26,7 +26,7 @@
 }
 
 .tx-black{
-  color: black;
+  color: #000000;
 }
 
 .tx-lightblack{
@@ -275,10 +275,9 @@ justify-content: center;
   width: 150px !important;
   height: 35px !important;
   border: 0;
-  border-radius: 30px;
   margin: 10px 0;
   text-shadow: 1px 1px #FFFFFF;
-  letter-spacing: 3px;
+  letter-spacing: 1px;
   box-shadow: 0 0 2px 1px #FFFFFF;
 }
 .login-button:active {
@@ -486,6 +485,7 @@ justify-content: center;
   box-shadow: 0 0 2px 1px #dadbdb !important;
   padding: 5px 20px !important;
   outline: none !important;
+  text-shadow: 1px 1px #FFFFFF;
 }
 .button-one:active{
   box-shadow: 0 0 4px 3px #dadbdb !important;
@@ -520,7 +520,6 @@ justify-content: center;
   border-bottom: 3px solid #144083 !important;
 }
 
-
 .input-box-flex{
   display: flex;
   flex-direction: column;
@@ -547,4 +546,3 @@ justify-content: center;
 .input-box-flex > input:hover {
   box-shadow: 0 0 5px 1px #dadbdb !important;
 }
-

@@ -56,7 +56,7 @@ const CreateBooking = (props) => {
                     <div className='button-box tx-center mt-3'>
                         <ButtonElement
                             label="SUBMIT"   
-                            className="button-one tx-white bg-yellow fw-semibold"
+                            className="button-one tx-black bg-yellow fw-semibold"
                             onClickButton={() => submitBooking()}
                         />
                     </div>

@@ -79,10 +79,10 @@ const Login = (props) => {
                         <div className='login-input-box'>
                             <TextboxElement id="password" type='password' placeholder="Password" className='password input-text' value={password}  onChangeText={(e) => setPassword(e.target.value)} />
                         </div>
-                        <div className='login-button-one tx-center'>
+                        <div className='login-button-box tx-center'>
                             <ButtonElement
                                 label="LOGIN"   
-                                className="login-button tx-white bg-yellow fw-semibold"
+                                className="login-button tx-black bg-yellow fw-semibold"
                                 onClickButton={() => onClickLogin()}
                             />
                         </div>
