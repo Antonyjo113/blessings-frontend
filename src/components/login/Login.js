@@ -12,6 +12,7 @@ import ButtonElement from '../../uiComponents/ButtonElement';
 import LoginService from '../../services/login/LoginService';
 import logoimage from '../../assets/images/logo.png';
 import logoimage1 from '../../assets/images/image.png';
+import logoimage2 from '../../assets/images/captionimage.png';
 
 // REACT COMPONENT
 const Login = (props) => {
@@ -62,9 +63,14 @@ const Login = (props) => {
             <div className='login-wrapper'>
                 <div className='logo-section content-itemend'>
                     <div className='logo-box tx-center'>
+                        <div className='caption-box content-center'>
+                            <h1 className='caption-txt'>Home away from home</h1>
+                            <img src={logoimage2} className='caption-logo' alt='logo' />
+                        </div>
                         {/* <img src={logoimage} className='logo' alt='Blessings Logo' />
                         <h1 className='logo-title tx-white m-zero'>Blessings</h1> */}
                         <img src={logoimage1} className='login-image' alt='Blessing Building Image' />
+
                     </div>
                 </div>
                 <div className='login-section content-center'>
