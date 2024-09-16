@@ -4,12 +4,18 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import Datatable from '../../uiComponents/Datatable';
 import ButtonElement from '../../uiComponents/ButtonElement';
 import TextboxElement from '../../uiComponents/InputTextElement';
+import BookingService from '../../services/booking/BookingService';
 
 // REACT COMPONENT
 const CreateBooking = (props) => {
 
     const submitBooking = () => {
-        console.log('data');
+        const data = []
+
+        BookingService.getUserData().then(data => {
+            console.log('22222', data);
+        });
+
     }
 
     const [roomNo, setRoomNo] = useState("");
