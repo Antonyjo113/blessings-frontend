@@ -10,6 +10,6 @@ const User = (props) => {
         <div className='main-content-wrapper'>
            <p> User Page </p>
         </div>
-    );
+    ); 
 }
 export default User;
