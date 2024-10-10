@@ -32,6 +32,52 @@ const Sidebar = ({ onMenuSelect }) => {
             command: (event) => {
                 onMenuItemClick(event)
             }
+        },
+        {
+            label: 'Settings',
+            title: 'Settings',
+            menuTitle: 'Settings',
+            items: [
+                {
+                    label: 'Business Unit',
+                    title: 'businessUnit',
+                    menuTitle: 'Business Unit',
+                    command: (event) => {
+                        onMenuItemClick(event)
+                    }
+                },
+                {
+                    label: 'User',
+                    title: 'user',
+                    menuTitle: 'User',
+                    command: (event) => {
+                        onMenuItemClick(event)
+                    }
+                }
+            ]
+        },
+        {
+            label: 'Configuration',
+            title: 'Configuration',
+            menuTitle: 'Configuration',
+            items: [
+                {
+                    label: 'Business Unit',
+                    title: 'businessUnitConfig',
+                    menuTitle: 'Business Unit',
+                    command: (event) => {
+                        onMenuItemClick(event)
+                    }
+                },
+                {
+                    label: 'User Role',
+                    title: 'userRoleConfig',
+                    menuTitle: 'User Role',
+                    command: (event) => {
+                        onMenuItemClick(event)
+                    }
+                }
+            ]
         }
     ]
 

@@ -10,7 +10,7 @@ import { Button } from 'primereact/button';
 import TextboxElement from '../../uiComponents/InputTextElement';
 import ButtonElement from '../../uiComponents/ButtonElement';
 import LoginService from '../../services/login/LoginService';
-import logoimage from '../../assets/images/logo.png';
+import logoimage from '../../assets/images/Blessing Hospitality - White.png';
 import logoimage1 from '../../assets/images/image.png';
 import logoimage2 from '../../assets/images/captionimage.png';
 
@@ -27,23 +27,30 @@ const Login = (props) => {
     // FUNCTIONS
     const onClickLogin = () => {
 
-        let loginData = {
-            'username': username,
-            'password': password
-        }
-        console.log('LOGIN CREDENTIALS: ', loginData);
-
         if(username != undefined && username != '' && password != undefined && password != ''){
 
-            if(username === 'admin' && password == 'admin'){
-                sessionStorage.setItem('authentication', 'blessings');
-                setTimeout(() => {
-                    navigate('/dashboard');
-                }, 2000);
+            let loginData = {
+                'email': username,
+                'password': password
             }
-            else {
-                console.log('Authentication Failed ...!');
-            }
+
+            console.log('LOGIN CREDENTIALS: ', loginData);
+
+            LoginService.userLogin(loginData).then(data => {
+                if(data.success === true){
+                    sessionStorage.setItem('authentication', 'blessings');
+                    sessionStorage.setItem('role', data.role);
+    
+                    setTimeout(() => {
+                        navigate('/dashboard');
+                    }, 2000);
+                }
+                else {
+                    console.log('Authentication Failed ...!');
+                }
+            });
+        } else {
+            console.log('Validation Failed ...!');
         }
         // ==========  API SERVICES ==========
 		// LoginService.userLogin(loginData).then(data => {
@@ -60,13 +67,16 @@ const Login = (props) => {
     // RETURN COMPONENT
     return (
         <div className='login'>
+                <div class="marquee">
+                    <span class="marquee-text">Home Away From Home...</span>
+                </div>
             <div className='login-wrapper'>
                 <div className='logo-section content-itemend'>
                     <div className='logo-box tx-center'>
-                        <div className='caption-box content-center'>
-                            <h1 className='caption-txt'>Home away from home</h1>
-                            <img src={logoimage2} className='caption-logo' alt='logo' />
-                        </div>
+                        {/* <div className='caption-box content-center'>
+                            <h1 className='caption-txt'>Home Away From Home</h1>
+                            {/* <img src={logoimage2} className='caption-logo' alt='logo' /> */}
+                        {/* </div> */} 
                         {/* <img src={logoimage} className='logo' alt='Blessings Logo' />
                         <h1 className='logo-title tx-white m-zero'>Blessings</h1> */}
                         <img src={logoimage1} className='login-image' alt='Blessing Building Image' />
@@ -77,7 +87,6 @@ const Login = (props) => {
                     <div className='login-box tx-left'>
                         <div className='logo-section-v2 content-itemend'>
                             <img src={logoimage} className='logo' alt='Logo' />
-                            <h1 className='login-title tx-white m-zero'>lessings</h1>
                         </div>
                         <div className='login-input-box'>
                             <TextboxElement id='username' placeholder="Username" className='username input-text' value={username}  onChangeText={(e) => setUsername(e.target.value)} />

@@ -2,7 +2,8 @@
 import axios from 'axios';
 
 // REACT INITIATIONS
-let baseUrl = process.env.REACT_APP_API_URL;
+// let baseUrl = process.env.REACT_APP_API_URL;
+let baseUrl = 'http://localhost:3001';
 
 // FUNCTIONS
 async function userLogin(loginData) {

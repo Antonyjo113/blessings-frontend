@@ -39,6 +39,22 @@ const Layout = () => {
             setMenuLabel('Create Booking');
             setMenuTitle('Create Booking');
         }
+        else if (location.pathname === '/businessunit'){
+            setMenuLabel('Business Unit');
+            setMenuTitle('Business Unit');
+        }
+        else if (location.pathname === '/user'){
+            setMenuLabel('User');
+            setMenuTitle('User');
+        }
+        else if (location.pathname === '/businessUnitConfig'){
+            setMenuLabel('Business Unit');
+            setMenuTitle('Business Unit');
+        }
+        else if (location.pathname === '/userRoleConfig'){
+            setMenuLabel('User Role');
+            setMenuTitle('User Role');
+        }
 
     }, [location.pathname])
 
@@ -64,6 +80,18 @@ const Layout = () => {
         } 
         else if (title === 'makeBooking'){
             navigate('/make-booking')
+        }
+        else if (title === 'businessUnit'){
+            navigate('/businessunit')
+        }
+        else if (title === 'user'){
+            navigate('/user')
+        }
+        else if (title === 'businessUnitConfig'){
+            navigate('/businessUnitConfig')
+        }
+        else if (title === 'userRoleConfig'){
+            navigate('/userRoleConfig')
         }
     }
 

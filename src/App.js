@@ -16,6 +16,10 @@ import Layout from './components/layout/Layout';
 import BookingList from './components/booking/BookingList';
 import MakeBooking from './components/booking/MakeBooking';
 import CreateBooking from './components/booking/CreateBooking';
+import BusinessUnit from './components/businessunit/BusinessUnit';
+import User from './components/user/User';
+import UserRoleConfig from './components/user/UserRoleConfig';
+import BusinessUnitConfig from './components/businessunit/BusinessUnitConfig';
 
 
 export const UserContext = createContext();
@@ -71,6 +75,11 @@ function App() {
               <Route path="/booking-list" element={<BookingList />} />
               <Route path="/make-booking" element={<MakeBooking />} />
               <Route path="/create-booking" element={<CreateBooking />} />
+              <Route path="/businessunit" element={<BusinessUnit />} />
+              <Route path="/user" element={<User />} />
+              <Route path="/userRoleConfig" element={<UserRoleConfig />} />
+              <Route path="/businessUnitConfig" element={<BusinessUnitConfig />} />
+
             </Route>
           </Routes>
         }

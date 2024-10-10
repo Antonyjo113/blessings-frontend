@@ -17,17 +17,22 @@ const TextboxElement = (props) => {
 
     /* Render View Return - Start */
     return (
-        <InputText
-            name={props.name}
-            value={inputValue}
-            onChange={(e) => handleChange(e)}
-            placeholder={props.placeholder}
-            className={props.className}
-            key={props.key}
-            type={props.type}
-            keyfilter={props.keyfilter}
-            disabled={props.disabled}
-        />
+        <div>
+            <label htmlFor="username">{props.label}</label>
+            <div>
+            <InputText
+                name={props.name}
+                value={inputValue}
+                onChange={(e) => handleChange(e)}
+                placeholder={props.placeholder}
+                className={props.className}
+                key={props.key}
+                type={props.type}
+                keyfilter={props.keyfilter}
+                disabled={props.disabled}
+            />
+            </div>
+        </div>
     );
 };
 
