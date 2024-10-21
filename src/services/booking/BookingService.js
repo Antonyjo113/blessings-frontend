@@ -11,4 +11,24 @@ async function getUserData() {
     return response.data;
 }
 
-export default { getUserData };
+async function getBookingAllData() {
+    let response = await axios.get(`${baseUrl}/booking`);
+    return response.data;
+}
+
+async function getBookingById(id) {
+    let response = await axios.get(`${baseUrl}/booking/${id}`);
+    return response.data;
+}
+
+async function createBooking(data) {
+    let response = await axios.post(`${baseUrl}/booking`, data);
+    return response.data;
+}
+
+async function updateBooking(id, data) {
+    let response = await axios.patch(`${baseUrl}/booking/${id}`, data);
+    return response.data;
+}
+
+export default { getUserData, getBookingAllData, getBookingById, createBooking, updateBooking };

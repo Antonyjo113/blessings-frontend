@@ -9,7 +9,7 @@ import { Row } from 'primereact/row';
 const Datatable = (props) => {
     const { columns, headerGroup, value, subheader } = props;
 
-    const dynamicColumns = columns.map((col) => (
+    const dynamicColumns = columns.filter(col => col.visible !== false).map((col) => (
         <Column key={col.field} field={col.field} header={col.header} body={col.body} sortable={col.sortable} style={col.style} />
     ));
 

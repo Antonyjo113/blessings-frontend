@@ -3,11 +3,27 @@ import React, { useEffect, useState, useRef } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import Datatable from '../../uiComponents/Datatable';
 import ButtonElement from '../../uiComponents/ButtonElement';
+import BookingService from '../../services/booking/BookingService';
 
 // REACT COMPONENT
 const BookingList = (props) => {
 
+    const [bookingAllData, setBookingAllData] = useState("");
+
+
     let navigate = useNavigate();
+
+    function getAllBookingData (){
+        BookingService.getBookingAllData().then(data => {
+            let data2 = data;
+            setBookingAllData(data2)
+        });
+    }
+    useEffect(() => {
+        getAllBookingData();
+    }, []);
+
+
 
     const bookingData = [
         {
@@ -49,76 +65,29 @@ const BookingList = (props) => {
 
 
     const actionTemplateValue = (data) => {
-        navigate('/create-booking');
-    }
+        navigate('/create-booking', { state: data });
+    };
 
     const actionTemplate = (rowData) => {
-        let data ={
-            start: 'check',
-            end: 'check',
-        }
         return (
-           <span onClick={() => actionTemplateValue(data)} className='icon'>
+           <span onClick={() => actionTemplateValue(rowData)} className='icon'>
                 <i class="bi bi-pencil"></i> 
            </span>
         )
     }
 
     const bookingColumns = [
-        {field: 'roomNo', header:'Room No'},
-        {field: 'startDate', header:'Start Date'},
-        {field: 'endDate', header:'End Date'},
-        {field: 'customerDetails', header:'Customer Details'},
-        {field: 'status', header:'Status'},
-        {field: 'action', header:'Action', body: actionTemplate, style:{textAlign:'center', cursor:'pointer'}}
-    ]
+        { field: 'id', header: 'ID', visible: false },
+        { field: 'booking_no', header: 'Booking No', visible: true },
+        { field: 'checkin', header: 'Check-in', visible: true },
+        { field: 'checkout', header: 'Check-out', visible: true },
+        { field: 'guest_name', header: 'Guest Name', visible: true },
+        { field: 'total_amount_including_extra_cost', header: 'Total Amount (Including Extra Cost)', visible: true },
+        { field: 'get_amount_paid', header: 'Amount Paid', visible: true },
+        { field: 'status', header: 'Status', visible: true },
+        { field: 'action', header: 'Action', body: actionTemplate, style: { textAlign: 'center', cursor: 'pointer' }, visible: true },
+    ];
 
-    const makeBookingData = [
-        {
-          roomNo: '106',
-          availableInfo: 'Available',
-          roomFeatures: 'King Size Bed, Sea View',
-          serviceInformation: 'Free Wi-Fi, Breakfast Included'
-        },
-        {
-          roomNo: '107',
-          availableInfo: 'Booked',
-          roomFeatures: 'Queen Size Bed, Garden View',
-          serviceInformation: 'Free Wi-Fi, Spa Access'
-        },
-        {
-          roomNo: '108',
-          availableInfo: 'Available',
-          roomFeatures: 'Double Bed, City View',
-          serviceInformation: 'Free Parking, Gym Access'
-        },
-        {
-          roomNo: '109',
-          availableInfo: 'Available',
-          roomFeatures: 'Single Bed, Pool View',
-          serviceInformation: 'Free Breakfast, Airport Shuttle'
-        },
-        {
-            roomNo: '110',
-            availableInfo: 'Available',
-            roomFeatures: 'Single Bed, Pool View',
-            serviceInformation: 'Free Breakfast, Airport Shuttle'
-          }
-      ];
-      
-
-    const makeBookingColumns = [
-        {field: 'roomNo', header:'Room No'},
-        {field: 'availableInfo', header:'Available Info'},
-        {field: 'roomFeatures', header:'Room Features'},
-        {field: 'serviceInformation', header:'Service Information'},
-        {field: 'action', header:'Action', body: actionTemplate, style:{textAlign:'center', cursor:'pointer'}}
-    ]
-
-    const onClickMakeBooking = () => {
-        navigate('/create-booking');
-    }
-        
     // RETURN COMPONENT
     return (
         <div className='main-content-wrapper'>
@@ -126,68 +95,9 @@ const BookingList = (props) => {
             <div className='spacing width-100'>
                 <p className='m-zero tx-blue fw-semibold'>Confirmed Booking</p>
                     <Datatable 
-                        value={bookingData}
+                        value={bookingAllData}
                         columns={bookingColumns}   
                     />
-            </div>
-            <div className='spacing'></div>
-            <div className='spacing'>
-                <div class="row">
-                    <div class="col-3 box-shadow">
-                        <div className='d-flex p-2 bg-blue'>
-                            <div>
-                                <p className='m-zero tx-white fw-normal'>Booked Rooms</p>
-                            </div>
-                            <div className='ms-1'>
-                                <p className='m-zero tx-white fw-semibold'>78</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3 box-shadow">
-                        <div className='d-flex p-2 bg-blue'>
-                            <div>
-                                <p className='m-zero tx-white fw-normal'>Booked Rooms</p>
-                            </div>
-                            <div className='ms-1'>
-                                <p className='m-zero tx-white fw-semibold'>78</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3 box-shadow">
-                        <div className='d-flex p-2 bg-blue'>
-                            <div>
-                                <p className='m-zero tx-white fw-normal'>Booked Rooms</p>
-                            </div>
-                            <div className='ms-1'>
-                                <p className='m-zero tx-white fw-semibold'>78</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-3 box-shadow">
-                        <div className='d-flex p-2 bg-blue'>
-                            <div>
-                                <p className='m-zero tx-white fw-normal'>Booked Rooms</p>
-                            </div>
-                            <div className='ms-1'>
-                                <p className='m-zero tx-white fw-semibold'>78</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className='spacing width-100'>
-                <p className='m-zero tx-blue fw-semibold'>Make Booking</p>
-                    <Datatable 
-                        value={makeBookingData}
-                        columns={makeBookingColumns}   
-                    />
-            </div>
-            <div className='button-box tx-center'>
-                <ButtonElement
-                    label="Make Booking"   
-                    className="button-one tx-black bg-yellow fw-semibold"
-                    onClickButton={() => onClickMakeBooking()}
-                />
             </div>
         </div>
     );

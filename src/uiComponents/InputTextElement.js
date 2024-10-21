@@ -17,8 +17,8 @@ const TextboxElement = (props) => {
 
     /* Render View Return - Start */
     return (
-        <div>
-            <label htmlFor="username">{props.label}</label>
+        <div className="spacing">
+            <label htmlFor="username" className="tx-blue">{props.label}</label>
             <div>
             <InputText
                 name={props.name}

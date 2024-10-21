@@ -58,15 +58,17 @@ const MakeBooking = (props) => {
            </span>
         )
     }
-      
 
     const makeBookingColumns = [
-        {field: 'roomNo', header:'Room No'},
-        {field: 'availableInfo', header:'Available Info'},
-        {field: 'roomFeatures', header:'Room Features'},
-        {field: 'serviceInformation', header:'Service Information'},
-        {field: 'action', header:'Action', body: actionTemplate, style:{textAlign:'center', cursor:'pointer'}}
-    ]
+        { field: 'booking_no', header: 'Booking No' },
+        { field: 'checkin', header: 'Check-in' },
+        { field: 'checkout', header: 'Check-out' },
+        { field: 'guest_name', header: 'Guest Name' },
+        { field: 'total_amount_including_extra_cost', header: 'Total Amount (Including Extra Cost)' },
+        { field: 'get_amount_paid', header: 'Amount Paid' },
+        { field: 'status', header: 'Status' },
+        { field: 'action', header: 'Action', body: actionTemplate, style: { textAlign: 'center', cursor: 'pointer' } },
+    ];
 
     const onClickMakeBooking = () => {
         navigate('/create-booking');

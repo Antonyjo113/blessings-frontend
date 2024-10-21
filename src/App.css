@@ -558,18 +558,7 @@ justify-content: center;
   border-bottom: 3px solid #144083 !important;
 }
 
-.input-box-flex{
-  display: flex;
-  flex-direction: column;
-}
-
-.input-box-flex > label{
-  color: #144083 !important;
-  margin: 5px 0 !important;
-  font-size: 12px;
-}
-
-.input-box-flex > input {
+.p-inputtext {
   padding: 0 !important;
   margin: 0 !important;
   padding: 3px !important;
@@ -581,7 +570,7 @@ justify-content: center;
   box-shadow: 0 0 2px 1px #dadbdb !important;
 }
 
-.input-box-flex > input:hover {
+.p-inputtext:hover {
   box-shadow: 0 0 5px 1px #dadbdb !important;
 }
 
@@ -714,13 +703,13 @@ justify-content: center;
 
 .p-checkbox-box:hover,
 .p-checkbox-box:focus {
-  background-color: #e0f2e9 !important; /* Light green for hover/focus */
-  border-color: #144083 !important; /* Optional: match the border color */
+  background-color: #e0f2e9 !important;
+  border-color: #144083 !important;
 }
 
 .p-checkbox.p-highlight .p-checkbox-box {
-  background-color: #144083 !important; /* Green background when checked */
-  border-color: #144083 !important; /* Optional: change border color to match the background */
+  background-color: #144083 !important;
+  border-color: #144083 !important;
   box-shadow: 0 0 5px 1px #dadbdb !important;
   padding: 2px;
 }
@@ -780,10 +769,13 @@ justify-content: center;
   padding: 10px 0;
 }
 
+/* ========== p-checkbox ============ */
 
 
 
-
+.p-checkbox{
+  
+}
 
 
 
