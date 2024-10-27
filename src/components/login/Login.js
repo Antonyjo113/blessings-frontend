@@ -89,10 +89,10 @@ const Login = (props) => {
                             <img src={logoimage} className='logo' alt='Logo' />
                         </div>
                         <div className='login-input-box'>
-                            <TextboxElement id='username' placeholder="Username" className='username input-text' value={username}  onChangeText={(e) => setUsername(e.target.value)} />
+                            <TextboxElement id='username' placeholder="Username" className='username input-text' labelClassName="label-hide" value={username}   onChangeText={(e) => setUsername(e.target.value)} />
                         </div>
                         <div className='login-input-box'>
-                            <TextboxElement id="password" type='password' placeholder="Password" className='password input-text' value={password}  onChangeText={(e) => setPassword(e.target.value)} />
+                            <TextboxElement id="password" type='password' placeholder="Password" className='password input-text' labelClassName="label-hide" value={password}  onChangeText={(e) => setPassword(e.target.value)} />
                         </div>
                         <div className='login-button-box tx-center'>
                             <ButtonElement

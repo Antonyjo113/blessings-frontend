@@ -5,6 +5,8 @@ import { InputText } from "primereact/inputtext";
 /* Function */
 const TextboxElement = (props) => {
     const [inputValue, setInputValue] = useState('');
+    const labelClassName = props.labelClassName + " tx-blue";
+
 
     /* Methods */
     useEffect(() => {
@@ -18,7 +20,7 @@ const TextboxElement = (props) => {
     /* Render View Return - Start */
     return (
         <div className="spacing">
-            <label htmlFor="username" className="tx-blue">{props.label}</label>
+            <label htmlFor="username" className={labelClassName}>{props.label}</label>
             <div>
             <InputText
                 name={props.name}
