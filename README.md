@@ -94,3 +94,12 @@ With this application, inn managers can significantly reduce the complexity of h
     Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
+
+## Stay in touch
+
+- Author - [Antony Joseph Raj] Gmail: antonyjo113@gamil
+- LinkedIn - (https://www.linkedin.com/in/antony-joseph-raj-9a1a93185/)
+
+## License
+
+This project is licensed under the MIT License.
