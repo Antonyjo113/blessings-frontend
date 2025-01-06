@@ -94,19 +94,3 @@ With this application, inn managers can significantly reduce the complexity of h
     Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
-
-## Modules Overview
-
-- **Login & Dashboard**: User authentication and financial overview of bookings and revenue.
-- **Booking**: View and manage bookings from external platforms.
-- **Make Booking**: Create new bookings, store guest details and preferences.
-- **User**: Manage user profiles and account details.
-- **Roles**: Define and manage user roles (Admin, Manager, Staff) with specific access.
-- **Business Unit**: Manage properties, locations, and multi-property setups.
-- **Floor & Rooms**: Configure room details, availability, and pricing.
-
----
-
-## License
-
-This project is licensed under the MIT License.
