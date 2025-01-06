@@ -1,70 +1,112 @@
-# Getting Started with Create React App
+# Inn Management Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is an **Inn Management Application** designed to streamline the management of online bookings and reservations across various platforms like **MakeMyTrip**, **Agoda**, and **OYO**. The application serves as a central hub, where bookings made on these third-party platforms are aggregated, allowing users to manage payments, confirmations, ID verification, and cancellation processes all in one place.
 
-## Available Scripts
+Through this platform, inn owners and managers can efficiently track and process bookings, improving overall operational efficiency and user experience. The goal is to provide an easy-to-use interface for handling the entire booking lifecycle, from initial reservation to final check-out.
 
-In the project directory, you can run:
+## Features & Functionalities:
+- **Online Booking Integration**: Seamlessly pulls in bookings made on popular travel platforms (MakeMyTrip, Agoda, OYO) into the application, offering a consolidated view of all reservations.
+- **Payment Management**: Facilitates the payment process for bookings directly within the application.
+- **Booking Confirmation & ID Verification**: Automatically confirms bookings and verifies user identification details as part of the reservation process.
+- **Booking Cancellation**: Enables cancellation of bookings directly through the platform, managing refunds and status updates.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Modules:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 1. Login & Dashboard
+- **Login**: Secure user authentication, allowing access to the application based on credentials.
+- **Dashboard**: 
+  - Displays a comprehensive financial overview of the inn's revenue.
+  - Shows income generated from bookings, cancellations, and payments.
+  - Provides quick insights into the inn's performance and key metrics.
 
-### `npm test`
+### 2. Booking
+- **Booking Overview**: 
+  - Displays all online bookings from various platforms (MakeMyTrip, Agoda, OYO).
+  - Allows the user to view detailed information about each booking.
+- **Manage Bookings**: 
+  - Enable users to perform actions such as booking confirmation, modification, or cancellation.
+  - Tracks the current status of each reservation (e.g., pending, confirmed, cancelled).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 3. Make Booking
+- **Create New Booking**: 
+  - Facilitates new reservations for guests.
+  - Allows users to input essential details like guest information, room preferences, and dates.
+- **Centralized Booking Management**: 
+  - All new bookings are stored in the system for easy management and tracking.
+  - Integrates with room availability and pricing details for accurate bookings.
 
-### `npm run build`
+### 4. User
+- **User Profiles**: 
+  - Manages individual user profiles with details like name, contact info, and booking history.
+  - Allows users to update their personal preferences and contact details.
+- **Admin Features**: 
+  - Admins can manage user accounts, including activating/deactivating accounts and modifying user details.
+  - Helps track user activity and preferences for better service.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 5. Roles
+- **Role Management**: 
+  - Allows the creation and assignment of different roles within the application (e.g., Admin, Manager, Staff).
+  - Assigns specific access rights and permissions based on roles.
+- **Access Control**: 
+  - Ensures that users only have access to the features they need, enhancing security and operational efficiency.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 6. Business Unit
+- **Property Profiles**: 
+  - Defines and manages each property or location the inn owns or operates.
+  - Each business unit can have unique settings, pricing models, and room availability.
+- **Multi-Property Support**: 
+  - Suitable for managing multiple properties under a single system, making it ideal for larger inn chains or franchises.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 7. Floor & Rooms
+- **Room Profiles**: 
+  - Defines room types, features, and specifications (e.g., single, double, suite).
+  - Allows users to set room pricing, availability, and amenities.
+- **Floor Configuration**: 
+  - Manages the layout of floors and room arrangements, ensuring availability reflects the actual setup of the inn.
+  - Room availability is automatically updated when bookings are made or cancelled.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+With this application, inn managers can significantly reduce the complexity of handling multiple booking sources and ensure seamless customer experiences from check-in to check-out.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Getting Started
 
-## Learn More
+1. **Clone the Repository**:
+    ```bash
+    git clone https://github.com/your-username/your-repository-name.git
+    ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. **Install Dependencies**:
+    ```bash
+    cd your-repository-name
+    npm install
+    ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. **Run the Application**:
+    ```bash
+    npm start
+    ```
+    Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Modules Overview
 
-### Analyzing the Bundle Size
+- **Login & Dashboard**: User authentication and financial overview of bookings and revenue.
+- **Booking**: View and manage bookings from external platforms.
+- **Make Booking**: Create new bookings, store guest details and preferences.
+- **User**: Manage user profiles and account details.
+- **Roles**: Define and manage user roles (Admin, Manager, Staff) with specific access.
+- **Business Unit**: Manage properties, locations, and multi-property setups.
+- **Floor & Rooms**: Configure room details, availability, and pricing.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License.
