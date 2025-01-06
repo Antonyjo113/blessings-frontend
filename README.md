@@ -99,7 +99,7 @@ With this application, inn managers can significantly reduce the complexity of h
 
 - Author - Antony Joseph Raj
 - Gmail - antonyjo113@gamil.com
-- LinkedIn - (https://www.linkedin.com/in/antony-joseph-raj-9a1a93185/)
+- LinkedIn - https://www.linkedin.com/in/antony-joseph-raj-9a1a93185/
 
 ## License
 
