@@ -1,3 +1,5 @@
+![Login Image](src/assets/images/login-readme.png)
+
 # Inn Management Application
 
 This project is an **Inn Management Application** designed to streamline the management of online bookings and reservations across various platforms like **MakeMyTrip**, **Agoda**, and **OYO**. The application serves as a central hub, where bookings made on these third-party platforms are aggregated, allowing users to manage payments, confirmations, ID verification, and cancellation processes all in one place.
